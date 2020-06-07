@@ -5,13 +5,14 @@ basically, each platform (discord/trello, etc) should send their raw data thru t
 all the raw data into a nicely formatted thing to send to the bot logic.  make sense?
 
 */
-var _sname = '(ContextBuilder)'
+var _log = '(ContextBuilder)'
 
 class ContextBuilder {
 
   constructor(settings) {
-    this.debug = settings.debug || false
-    this.simplified = settings.simplified || false
+    this.settings = settings || {}
+    this.debug = this.settings.debug || false;
+    this.simplified = this.settings.simplified || false;
   };
   
   TrelloContext(input) {
@@ -56,8 +57,8 @@ class ContextBuilder {
     }
     
     // returns the newly created context object
-    if (this.debug) console.log(_sname, JSON.stringify(input, null, ' '))
-    if (this.simplified) console.log(_sname, JSON.stringify(this, null, ' '))
+    if (this.debug) console.log(_log, JSON.stringify(input, null, ' '))
+    if (this.simplified) console.log(_log, JSON.stringify(this, null, ' '))
     return this
 
   };
@@ -107,6 +108,8 @@ class ContextBuilder {
     this.channel = {
       name: input.target
     }
+    if (this.debug) console.log(_log, JSON.stringify(input, null, ' '))
+    if (this.simplified) console.log(_log, JSON.stringify(this, null, ' '))
     return this
   }
 
