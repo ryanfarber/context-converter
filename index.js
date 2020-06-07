@@ -10,8 +10,9 @@ var _sname = '(ContextBuilder)'
 class ContextBuilder {
 
   constructor(settings) {
-    this.debug = settings.debug || false
-    this.simplified = settings.simplified || false
+    this.settings = settings || {}
+    this.debug = this.settings.debug || false;
+    this.simplified = this.settings.simplified || false;
   };
   
   TrelloContext(input) {
@@ -107,6 +108,8 @@ class ContextBuilder {
     this.channel = {
       name: input.target
     }
+    if (this.debug) console.log(_sname, JSON.stringify(input, null, ' '))
+    if (this.simplified) console.log(_sname, JSON.stringify(this, null, ' '))
     return this
   }
 
