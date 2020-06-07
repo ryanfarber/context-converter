@@ -1,6 +1,7 @@
 # contextbuilter
 
-a tool for taking application contexts and converting them to a cohesive format
+when you want to interface with multiple platforms/applications, but want to have a unified language.
+
 
 ## Supported Platforms
 - Discord
