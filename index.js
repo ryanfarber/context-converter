@@ -92,7 +92,7 @@ class ContextBuilder {
   TwitchContext(input) {
     this.info = {
       service: 'twitch',
-      type: input['message-type']
+      type: input['message-type'],
       timestamp: input['tmi-sent-ts']
     }
     this.user = {
