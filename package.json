@@ -1,14 +1,21 @@
 {
   "name": "@surfingpikachu/context-builder",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "a tool for unifying multiple platform contexts into a single language",
+  "keywords": [
+    "discord",
+    "twitch",
+    "twilio",
+    "tools",
+    "chatbots"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryanfarber/contextbuilder.git"
+    "url": "git+https://github.com/ryanfarber/context-builder.git"
   },
   "author": "Ryan Farber",
   "license": "ISC",
