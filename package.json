@@ -1,10 +1,10 @@
 {
-  "name": "contextbuilder",
+  "name": "@surfingpikachu/context-builder",
   "version": "1.0.0",
   "description": "a tool for unifying multiple platform contexts into a single language",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "author": "Ryan Farber",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ryanfarber/contextbuilder/issues"
+    "url": "https://github.com/ryanfarber/context-builder/issues"
   },
-  "homepage": "https://github.com/ryanfarber/contextbuilder#readme"
+  "homepage": "https://github.com/ryanfarber/context-builder#readme"
 }
