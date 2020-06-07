@@ -16,6 +16,11 @@ class ContextBuilder {
   
   TrelloContext(input) {
 
+    this.info = {
+      service: 'trello',
+      timestamp: input.date,
+    }
+
     this.action = {
       id: input.id,
       type: input.type,
@@ -57,8 +62,11 @@ class ContextBuilder {
 
   };
 
+
   DiscordContext(input) {
     this.info = {
+      service: 'discord',
+      type: input.channel.type,
       timestamp: input.createdTimestamp
     }
     this.user = {
@@ -79,6 +87,29 @@ class ContextBuilder {
     }
     return this
   };
+
+
+  TwitchContext(input) {
+    this.info = {
+      service: 'twitch',
+      type: input['message-type']
+      timestamp: input['tmi-sent-ts']
+    }
+    this.user = {
+      name: input.username,
+      id: input['user-id'],
+      type: input['user-type'],
+      is_subscriber: input.subscriber
+    }
+    this.message = {
+      text: input.msg,
+      id: input.id
+    }
+    this.channel = {
+      name: input.target
+    }
+    return this
+  }
 
 };
 
