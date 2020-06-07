@@ -62,7 +62,6 @@ class ContextBuilder {
 
   };
 
-
   DiscordContext(input) {
     this.info = {
       service: 'discord',
