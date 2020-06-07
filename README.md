@@ -9,6 +9,7 @@ when you want to interface with multiple platforms/applications, but want to hav
 - Twilio
 - Trello
  
-```const ContextBuilder = require('@surfingpikachu/context-builder');
+```javascript
+const ContextBuilder = require('@surfingpikachu/context-builder');
 
 ```
