@@ -10,8 +10,12 @@ when you want to interface with multiple platforms/applications, but want to hav
 - Trello
  
 ```javascript
-const Context = require('@surfingpikachu/context-builder');
 
-const context = new Context({debug: false}).TwitchContext()
+const ContextBuilder = require('@surfingpikachu/context-builder');
 
+const Build = new ContextBuilder({debug: false})
+
+var context = Build.TwitchContext(data)
+
+console.log(context)
 ```
