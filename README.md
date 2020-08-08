@@ -8,6 +8,9 @@ when you want to interface with multiple platforms/applications, but want to hav
 - Twitch
 - Twilio
 - Trello
+- Frame.io
+- Transmission
+- Trello
  
 ```javascript
 
