@@ -1,8 +1,8 @@
-var { TwitchContext, DiscordContext, TwilioContext } = require('./index.js');
+var ContextBuilder = require('./index.js');
 
-var twitch = new TwitchContext()
-var discord = new DiscordContext()
-var twilio = new TwilioContext()
+var twitch = new ContextBuilder.TwitchContext()
+var discord = new ContextBuilder.DiscordContext()
+var twilio = new ContextBuilder.TwilioContext()
 
 
 console.log(twitch)
