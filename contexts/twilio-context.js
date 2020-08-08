@@ -4,14 +4,14 @@ function TwilioContext(data = {}, settings) {
 
 	this.context_name = 'twilio';
 	this.type = "sms";
-	this.timestamp = "";
+	this.timestamp = "unavailable";
 	this.user = {
 		name: data.From,
-		id: data.MessageSID
+		id: data.MessageSid
 	};
 	this.message = {
 		text: data.Body,
-		id: data.MessageSID
+		id: data.MessageSid
 	};
 
 };
