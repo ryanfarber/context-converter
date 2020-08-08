@@ -1,7 +1,6 @@
 // twilio context
 
 function TwilioContext(data = {}, settings) {
-	// this.settings = settings || {}
 
 	this.context_name = 'twilio';
 	this.type = "";
@@ -14,8 +13,6 @@ function TwilioContext(data = {}, settings) {
 		text: data.content,
 		id: data.id
 	};
-
-	if (this.settings.debug) console.log(data)
 
 };
 
