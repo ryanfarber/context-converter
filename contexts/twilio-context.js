@@ -1,8 +1,7 @@
 // twilio context
 
-function TwilioContext(data, settings) {
-	data = {}
-	this.settings = settings || {}
+function TwilioContext(data = {}, settings) {
+	// this.settings = settings || {}
 
 	this.context_name = 'twilio';
 	this.type = "";
