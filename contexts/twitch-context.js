@@ -1,8 +1,7 @@
-function TwitchContext(data, settings) {
-  data = {}
-  this.settings = settings || {}
+function TwitchContext(data = {}, settings) {
+  // this.settings = settings || {}
   
-  this.context_name = 'twitch';
+  this.name = 'twitch';
   this.type = data["message-type"];
   this.timestamp = data['tmi-sent-ts'];
   this.user = {

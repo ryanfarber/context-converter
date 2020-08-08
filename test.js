@@ -1,9 +1,10 @@
-var ContextBuilder = require('./index.js');
+var { TwitchContext, DiscordContext, TwilioContext } = require('./index.js');
 
-var data = {
-	'username': 'johnsmith666',
-	'user-id': '34325235'
-};
-var context = new ContextBuilder().TwitchContext(data)
+var twitch = new TwitchContext()
+var discord = new DiscordContext()
+var twilio = new TwilioContext()
 
-console.log(context)
+
+console.log(twitch)
+console.log(discord)
+console.log(twilio)
