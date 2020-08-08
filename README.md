@@ -14,11 +14,14 @@ when you want to interface with multiple platforms/applications, but want to hav
  
 ```javascript
 
-const ContextBuilder = require('@surfingpikachu/context-builder');
+var ContextBuilder = require('./index.js');
 
-const Build = new ContextBuilder({debug: false})
+var twitch = new ContextBuilder.TwitchContext()
+var discord = new ContextBuilder.DiscordContext()
+var twilio = new ContextBuilder.TwilioContext()
 
-var context = Build.TwitchContext(data)
+console.log(twitch)
+console.log(discord)
+console.log(twilio)
 
-console.log(context)
 ```
