@@ -1,16 +1,11 @@
 # context-builder
 
-when you want to interface with multiple platforms/applications, but want to have a unified language.
-
+a tool to help interface with multiple chat platforms/applications.
 
 ## Supported Platforms
 - Discord
 - Twitch
 - Twilio
-- Trello
-- Frame.io
-- Transmission
-- Trello
  
 ```javascript
 
@@ -25,3 +20,10 @@ console.log(discord)
 console.log(twilio)
 
 ```
+
+## More platforms coming soon
+
+- Trello
+- Frame.io
+- Transmission
+- Trello
