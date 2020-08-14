@@ -7,6 +7,7 @@ const TrelloContext         = require("./contexts/trello-context.js");
 const TwilioContext         = require("./contexts/twilio-context.js");
 const TwitchContext         = require("./contexts/twitch-context.js");
 const TransmissionContext   = require("./contexts/transmission-context.js");
+const GithubContext 		= require("./contexts/github-context.js")
 
 
 module.exports = {
@@ -16,5 +17,6 @@ module.exports = {
   TrelloContext,
   TwilioContext,
   TwitchContext,
-  TransmissionContext
+  TransmissionContext,
+  GithubContext
 }
