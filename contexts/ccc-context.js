@@ -8,7 +8,7 @@ function CCCContext(input = []) {
 	// } else {
 	//   input = input.split('|');
 	// };
-	this.context_name = 'ccc'
+	this.name = 'ccc'
 	this.task = input[0]
 	this.copyfrom = input[1]
 	this.copyto = input[2]

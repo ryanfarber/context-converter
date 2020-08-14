@@ -2,7 +2,7 @@
 
 function TwilioContext(data = {}, settings) {
 
-	this.context_name = 'twilio';
+	this.name = 'twilio';
 	this.type = "sms";
 	this.timestamp = "unavailable";
 	this.user = {

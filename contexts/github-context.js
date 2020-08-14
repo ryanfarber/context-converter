@@ -1,6 +1,6 @@
 // github-context.js
 
-function GithubContext(input = {}) {
+function GithubContext(input = { hook: { events: [] }, repository: { owner: {} }, sender: {} }) {
 	this.name = "github";
 	this.zen = input.zen;
 	this.events = input.hook.events

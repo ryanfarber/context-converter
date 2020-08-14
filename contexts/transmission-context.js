@@ -1,6 +1,6 @@
 // transmission-context.js
 
-function TransmissionContext(input) {
+function TransmissionContext(input = {}) {
 	this.name = "transmission"
 	this.timestamp = input.timestamp
 	this.torrentName = input.name

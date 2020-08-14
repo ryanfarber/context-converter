@@ -4,7 +4,7 @@ function FrameioContext(input, settings) {
 
     if (this.settings.debug) console.log(input)
 
-    this.context_name = 'frameio'
+    this.name = 'frameio'
     this.action = input.type
     this.project = input.project.id
     this.resource = {

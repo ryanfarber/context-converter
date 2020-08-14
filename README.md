@@ -6,6 +6,9 @@ a tool to help interface with multiple chat platforms/applications.
 - Discord
 - Twitch
 - Twilio
+- Github
+- Transmission
+- CarbonCopyCloner
  
 ```javascript
 
@@ -25,5 +28,3 @@ console.log(twilio)
 
 - Trello
 - Frame.io
-- Transmission
-- Trello
