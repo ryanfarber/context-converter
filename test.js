@@ -1,5 +1,6 @@
 var ContextBuilder = require('./index.js');
 
+console.log(github)
 var twitch = new ContextBuilder.TwitchContext()
 var discord = new ContextBuilder.DiscordContext()
 var twilio = new ContextBuilder.TwilioContext()

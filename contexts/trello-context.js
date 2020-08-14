@@ -1,7 +1,7 @@
 // trello-context.js
 
 function TrelloContext(input = {data: {}, memberCreator: {}}) {
-    this.context_name = 'trello'
+    this.name = 'trello'
     this.info = {
       timestamp: input.date,
     }
