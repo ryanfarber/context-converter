@@ -5,6 +5,7 @@ function TransmissionContext(input = {}) {
 	this.timestamp = input.timestamp
 	this.torrentName = input.name
 	this.directory = input.directory
+	this.message = "Torrent downloaded!"
 };
 
 module.exports = TransmissionContext
