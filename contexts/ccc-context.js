@@ -1,13 +1,9 @@
 // ccc-context.js
 
-function CCCContext(input = []) {
-	// if (input == undefined) return
-	if (this.settings.debug) console.log(input)
-	// if (!input) {
-	//   input = [];
-	// } else {
-	//   input = input.split('|');
-	// };
+function CCCContext(input = [], settings = {}) {
+
+	if (settings.debug) console.log(input)
+
 	this.name = 'ccc'
 	this.task = input[0]
 	this.copyfrom = input[1]
@@ -24,8 +20,6 @@ function CCCContext(input = []) {
 	if (this.status == 'Cancelled') {
 		this.message = `🚫 **Copy Cancelled**\n**task**: ${this.task}\n**status**: ${this.status}\n**time elapsed**: ${this.time}\n**data copied**: ${this.datacopied}`;
 	};
-	if (this.settings.simple) console.log(this)
-	return this
 
 } // END CCCContext
 

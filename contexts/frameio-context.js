@@ -14,10 +14,10 @@ function FrameioContext(input = { resource: {}, project: {}, user: {} }, setting
     this.user = {
       id: input.user.id
     }
-    this.message = undefined
     
     switch (this.action) {
       case undefined:
+      this.message = undefined;
         break;
       case "comment.created":
         this.message = "new comment"
