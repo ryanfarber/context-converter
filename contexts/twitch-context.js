@@ -15,7 +15,8 @@ function TwitchContext(data = {}, settings) {
     id: data.id
   };
   this.channel = {
-    name: data.target
+    name: data.target,
+    id: undefined,
   };
   // if (this.settings.debug) console.log(_log, JSON.stringify(data, null, ' '));
   // if (this.settings.simple) console.log(_log, JSON.stringify(this, null, ' '));

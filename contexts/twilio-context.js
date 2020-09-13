@@ -4,7 +4,7 @@ function TwilioContext(data = {}, settings) {
 
 	this.name = 'twilio';
 	this.type = "sms";
-	this.timestamp = "unavailable";
+	this.timestamp = (data.hasOwnProperty("timestamp")) ? data.timestamp : undefined;
 	this.user = {
 		name: data.From,
 		id: data.MessageSid

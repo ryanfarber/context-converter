@@ -1,22 +1,13 @@
 // index.js
 
-const CCCContext            = require("./contexts/ccc-context.js");
-const DiscordContext        = require("./contexts/discord-context.js");
-const FrameioContext        = require("./contexts/frameio-context.js");
-const TrelloContext         = require("./contexts/trello-context.js");
-const TwilioContext         = require("./contexts/twilio-context.js");
-const TwitchContext         = require("./contexts/twitch-context.js");
-const TransmissionContext   = require("./contexts/transmission-context.js");
-const GithubContext 		= require("./contexts/github-context.js")
-
-
-module.exports = {
-  CCCContext,
-  DiscordContext,
-  FrameioContext,
-  TrelloContext,
-  TwilioContext,
-  TwitchContext,
-  TransmissionContext,
-  GithubContext
+module.exports= {
+	CCCContext: require("./contexts/ccc-context.js"),
+	DiscordContext: require("./contexts/discord-context.js"),
+	FrameioContext: require("./contexts/frameio-context.js"),
+	TrelloContext: require("./contexts/trello-context.js"),
+	TwilioContext: require("./contexts/twilio-context.js"),
+	TwitchContext: require("./contexts/twitch-context.js"),
+	TransmissionContext: require("./contexts/transmission-context.js"),
+	GithubContext: require("./contexts/github-context.js"),
+	WebContext: require("./contexts/web-context.js")
 }
