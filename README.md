@@ -24,11 +24,12 @@ console.log(twilio)
 
 
 discord.on("message", (data) => {
-	let message = new ContextBuilder.DiscordContext(data)
+	let context = new ContextBuilder.DiscordContext(data, botId)
+
 })
 
 twitch.on("message", (channel, userstate, message, self) => {
-	let message = new ContextBuilder.TwitchContext(channel, userstate, message)
+	let context = new ContextBuilder.TwitchContext(channel, userstate, message, botUsername)
 })
 
 

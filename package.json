@@ -1,6 +1,6 @@
 {
   "name": "rf-context-builder",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "a tool for unifying multiple platform contexts into a single language",
   "keywords": [
     "discord",
