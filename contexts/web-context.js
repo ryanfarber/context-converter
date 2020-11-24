@@ -10,7 +10,7 @@ function WebContext(data = {}, settings) {
     name: data.username,
     id: data['user-id'],
     type: undefined,
-    is_subscriber: undefined
+    isSubscriber: undefined
   };
   this.message = {
     text: data.message_text,

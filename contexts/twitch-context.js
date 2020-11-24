@@ -1,26 +1,26 @@
-function TwitchContext(data = {}, settings) {
-  // this.settings = settings || {}
+// twitch-context.js
+
+
+function TwitchContext(channel, userstate = {}, message, settings) {
+  // if (!channel || !userstate || !message) console.warn("TWITCHCONTEXT: check arguments (channel, userstate, message)")
   
   this.name = 'twitch';
-  this.type = data["message-type"];
-  this.timestamp = data['tmi-sent-ts'];
+  this.type = userstate["message-type"];
+  this.timestamp = userstate['tmi-sent-ts'];
   this.user = {
-    name: data.username,
-    id: data['user-id'],
-    type: data['user-type'],
-    is_subscriber: data.subscriber
+    name: userstate.username,
+    id: userstate['user-id'],
+    type: userstate['user-type'],
+    isSubscriber: userstate.subscriber
   };
   this.message = {
-    text: data.msg,
-    id: data.id
+    text: message,
+    id: userstate.id
   };
   this.channel = {
-    name: data.target,
-    id: undefined,
+    name: channel,
+    id: userstate["room-id"],
   };
-  // if (this.settings.debug) console.log(_log, JSON.stringify(data, null, ' '));
-  // if (this.settings.simple) console.log(_log, JSON.stringify(this, null, ' '));
-  // return this
 };
 
 module.exports = TwitchContext

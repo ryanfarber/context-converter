@@ -7,7 +7,9 @@ function DiscordContext(data = { channel: { type: undefined, guild: { name: unde
   this.timestamp = data.createdTimestamp;
   this.user = {
     name: data.author.username,
-    id: data.author.id
+    id: data.author.id,
+    type: undefined,
+    isSubscriber: undefined
   };
   this.message = {
     text: data.content,
