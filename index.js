@@ -7,6 +7,7 @@ module.exports= {
 	TrelloContext: require("./contexts/trello-context.js"),
 	TwilioContext: require("./contexts/twilio-context.js"),
 	TwitchContext: require("./contexts/twitch-context.js"),
+	TelegramContext: require("./contexts/telegram-context.js"),
 	TransmissionContext: require("./contexts/transmission-context.js"),
 	GithubContext: require("./contexts/github-context.js"),
 	WebContext: require("./contexts/web-context.js")
