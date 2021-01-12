@@ -10,5 +10,6 @@ module.exports= {
 	TelegramContext: require("./contexts/telegram-context.js"),
 	TransmissionContext: require("./contexts/transmission-context.js"),
 	GithubContext: require("./contexts/github-context.js"),
-	WebContext: require("./contexts/web-context.js")
+	WebContext: require("./contexts/web-context.js"),
+	TwilioErrorContext: require("./contexts/twilio-error-context.js")
 }
