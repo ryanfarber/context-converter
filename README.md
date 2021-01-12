@@ -6,6 +6,7 @@ a tool to help interface with multiple chat platforms/applications.
 - Discord
 - Twitch
 - Twilio
+- Telegram
 - Github
 - Transmission
 - CarbonCopyCloner
