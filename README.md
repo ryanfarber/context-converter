@@ -4,6 +4,10 @@
 
 a tool for converting different channel contexts into a unified context
 
+---
+
+***UNDER DEVELOPMENT! NOT FOR PRODUCTION USE***
+
 ## Current Supported Platforms
 - Discord
 - Twitch
