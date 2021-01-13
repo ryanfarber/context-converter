@@ -1,5 +1,7 @@
 # context-converter
 
+[image](https://www.clipartmax.com/png/middle/417-4175992_ac-dc-converter-icon-free-download-at-icons8-it-is-ravensbourne-logo.png)
+
 a tool for converting different channel contexts into a unified context
 
 ## Supported Platforms
