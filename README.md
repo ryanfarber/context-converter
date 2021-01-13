@@ -4,7 +4,7 @@
 
 a tool for converting different channel contexts into a unified context
 
-## Supported Platforms
+## Current Supported Platforms
 - Discord
 - Twitch
 - Telegram
@@ -22,7 +22,7 @@ const twitch = new ContextConverter.TwitchContext()
 const twilio = new ContextConverter.TwilioContext()
 ```
 
-## example usage
+## Example Usage
 
 ```javascript
 
@@ -39,13 +39,18 @@ discordClient.on("message", (data) => {
 twitchClient.on("message", (channel, userstate, message, self) => {
 	let twitchBotId = "123456789"
 	let context = new ContextConverter.TwitchContext(channel, userstate, message, twitchBotId)
+	console.log(context)
 })
 ````
 
-## context schema
+## Context Schema
 
 `name` - name of the channel/context (i.e. discord, twitch, telegram, etc)
+
 `user`
+
 `message`
+
 `server`
+
 `channel`
