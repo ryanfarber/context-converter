@@ -1,42 +1,49 @@
-# context-builder
+# context-converter
 
-a tool to help interface with multiple chat platforms/applications.
+a tool for converting different channel contexts into a unified context
 
 ## Supported Platforms
 - Discord
 - Twitch
-- Twilio
 - Telegram
+- Twilio
 - Github
 - Transmission
 - CarbonCopyCloner
  
 ```javascript
 
-var ContextBuilder = require('rf-context-builder');
+const ContextConverter = require('context-converter');
 
-var discord = new ContextBuilder.DiscordContext()
-var twitch = new ContextBuilder.TwitchContext()
-var twilio = new ContextBuilder.TwilioContext()
-
-console.log(twitch)
-console.log(discord)
-console.log(twilio)
-
-
-discord.on("message", (data) => {
-	let context = new ContextBuilder.DiscordContext(data, botId)
-
-})
-
-twitch.on("message", (channel, userstate, message, self) => {
-	let context = new ContextBuilder.TwitchContext(channel, userstate, message, botUsername)
-})
-
-
+const discord = new ContextConverter.DiscordContext()
+const twitch = new ContextConverter.TwitchContext()
+const twilio = new ContextConverter.TwilioContext()
 ```
 
-## More platforms coming soon
+## example usage
 
-- Trello
-- Frame.io
+```javascript
+
+const ContextConverter = require('context-converter');
+
+
+discordClient.on("message", (data) => {
+	let discordBotId = "123456789"
+	let context = new ContextConverter.DiscordContext(data, discordBotId)
+	consoel.log(context)
+
+})
+
+twitchClient.on("message", (channel, userstate, message, self) => {
+	let twitchBotId = "123456789"
+	let context = new ContextConverter.TwitchContext(channel, userstate, message, twitchBotId)
+})
+````
+
+## context schema
+
+`name` - name of the channel/context (i.e. discord, twitch, telegram, etc)
+`user`
+`message`
+`server`
+`channel`
