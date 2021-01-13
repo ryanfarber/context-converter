@@ -13,10 +13,7 @@ a tool for converting different channel contexts into a unified context
 - Twitch
 - Telegram
 - Twilio
-- Github
-- Transmission
-- CarbonCopyCloner
- 
+
 ```javascript
 
 const ContextConverter = require('context-converter');
