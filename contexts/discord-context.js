@@ -1,9 +1,10 @@
 // discord-context.js
 
 
+
 function DiscordContext(data = { channel: { type: undefined, guild: { name: undefined, id: undefined } }, author: { username: undefined } }, botUsername, debug) {
   // this.settings = settings || {};
-  
+
   this.name = "discord";
   this.type = data.channel.type;
   this.timestamp = data.createdTimestamp;

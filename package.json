@@ -1,7 +1,7 @@
 {
-  "name": "rf-context-builder",
-  "version": "1.6.4",
-  "description": "a tool for unifying multiple platform contexts into a single language",
+  "name": "context-converter",
+  "version": "2.0.0",
+  "description": "a tool for converting different channel contexts into a unified context",
   "keywords": [
     "discord",
     "twitch",
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryanfarber/context-builder.git"
+    "url": "git+https://github.com/ryanfarber/context-converter.git"
   },
   "author": "Ryan Farber",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ryanfarber/context-builder/issues"
+    "url": "https://github.com/ryanfarber/context-converter/issues"
   },
-  "homepage": "https://github.com/ryanfarber/context-builder#readme"
+  "homepage": "https://github.com/ryanfarber/context-converter#readme"
 }
