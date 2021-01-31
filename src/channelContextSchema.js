@@ -1,6 +1,6 @@
 
 
-function channelContextSchema() {
+function channelContext() {
 
 	this.name = undefined;
 	this.type = undefined;
@@ -42,8 +42,9 @@ function channelContextSchema() {
 		id: undefined,
 		type: undefined,
 		text: undefined,
-		attachments: undefined
+		attachments: undefined,
+		timestamp: undefined
 	};
 };
 
-module.exports = channelContextSchema
+module.exports = channelContext

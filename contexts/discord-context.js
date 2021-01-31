@@ -36,6 +36,7 @@ function DiscordContext(data = { channel: { type: undefined, guild: { name: unde
 
 function checkIfMentioned(message, botUsername) {
   if (!botUsername) return undefined
+
   botUsername = `<@!${botUsername}>`   // adds the tags that discord adds to user
   let messageArgs = message.split(" ")  // split message into arguments
   if (messageArgs.includes(botUsername)) {

@@ -1,6 +1,6 @@
 // index.js
 
-module.exports= {
+module.exports = {
 	CCCContext: require("./contexts/ccc-context.js"),
 	DiscordContext: require("./contexts/discord-context.js"),
 	FrameioContext: require("./contexts/frameio-context.js"),
@@ -13,3 +13,5 @@ module.exports= {
 	WebContext: require("./contexts/web-context.js"),
 	TwilioErrorContext: require("./contexts/twilio-error-context.js")
 }
+
+module.exports.v2 = require("./src")
