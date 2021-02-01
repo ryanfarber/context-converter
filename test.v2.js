@@ -28,6 +28,6 @@ let ContextBuilder = require("./src")
 // }
 
 
-let c = new ContextBuilder.TwitchContext()
+let c = new ContextBuilder.TwitchWebhookContext()
 
 console.log(c)

@@ -23,7 +23,10 @@ function TelegramContext(settings = {}) {
     schema.isMentioned = checkIfMentioned(data.text, botUsername);
 
     schema.channel.name = "telegram"
-
+    schema.server.id = data.chat.id;
+    schema.server.name = data.chat.username;
+    schema.server.type = data.chat.type;
+    
     schema.subChannel.id = data.chat.id;
     schema.subChannel.name = data.chat.username;
     schema.subChannel.type = data.chat.type;

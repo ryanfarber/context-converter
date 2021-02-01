@@ -21,7 +21,7 @@ function TwilioContext(settings = {}) {
 	schema.user.id = data.From
 	schema.user.name = data.From
 
-	schema.message.id = dataMessageSid
+	schema.message.id = data.MessageSid
 	schema.message.text = data.Body
 
 	return schema;
