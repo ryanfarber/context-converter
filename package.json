@@ -1,6 +1,6 @@
 {
   "name": "context-converter",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "a tool for converting different channel contexts into a unified context",
   "keywords": [
     "discord",

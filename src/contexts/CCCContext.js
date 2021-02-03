@@ -16,6 +16,7 @@ function CCCContext(input = {result: ""}, settings = {}) {
 		this.path = `\`${this.copyfrom} > ${this.copyto}\``;
 		this.copyfromformat = `\`${this.copyfrom}\``;
 		this.copytoformat = `\`${this.copyto}\``;
+		this.message = undefined
 
 		if (this.status == 'Success') {
 			this.message = `**Copy Successful** ✅\n**task**: ${this.task}\n**A**: ${this.copyfromformat}\n**B**: ${this.copytoformat}\n**time elapsed**: ${this.time}\n**data copied**: ${this.datacopied}`;
@@ -23,7 +24,9 @@ function CCCContext(input = {result: ""}, settings = {}) {
 		if (this.status == 'Cancelled') {
 			this.message = `**Copy Cancelled** 🚫\n**task**: ${this.task}\n**A**: ${this.copyfromformat}\n**B**: ${this.copytoformat}\n**time elapsed**: ${this.time}\n**data copied**: ${this.datacopied}`;
 		};
-
+		if (this.status == 'Failed') {
+			this.message = `**Copy Failed** 🚫\n**task**: ${this.task}\n**A**: ${this.copyfromformat}\n**B**: ${this.copytoformat}\n**time elapsed**: ${this.time}\n**data copied**: ${this.datacopied}`;
+		};
 
 } // END CCCContext
 
