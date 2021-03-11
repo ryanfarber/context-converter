@@ -16,7 +16,7 @@ function DiscordContext(settings = {}) {
     schema.name = "discord";
     schema.type = "platform"
     schema.timestamp = data.date;
-    schema.isMentioned = checkIfMentioned(data.content, botUsername);
+    schema.isMentioned = checkIfMentioned(data.content, botUserid);
 
     schema.channel.name = "discord"
 
