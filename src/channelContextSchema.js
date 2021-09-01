@@ -16,6 +16,9 @@ function channelContext() {
 		id: undefined,
 		type: undefined
 	};
+	this.inlineQuery = {
+		id: undefined
+	}
 
 	// i.e. discord channel/telegram chat
 	this.subChannel = {
@@ -43,7 +46,8 @@ function channelContext() {
 		type: undefined,
 		text: undefined,
 		attachments: undefined,
-		timestamp: undefined
+		timestamp: undefined,
+		isInlineQueryResponse: undefined
 	};
 };
 

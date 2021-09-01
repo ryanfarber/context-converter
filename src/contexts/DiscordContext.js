@@ -4,7 +4,7 @@ let channelSchema = require("../channelContextSchema.js");
 let schema = new channelSchema();
 
 function DiscordContext(settings = {}) {
-
+    
     if (!settings.data || settings.data == "") console.warn("WARNING no [data] provided");
     if (!settings.botUsername) console.warn("WARNING no [botUsername] provided");
     if (!settings.botUserid) console.warn("WARNING no [botUserid] provided");

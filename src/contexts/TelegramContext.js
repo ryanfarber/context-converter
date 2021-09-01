@@ -14,33 +14,43 @@ function TelegramContext(settings = {}) {
     let botUsername = settings.botUsername;
     let botUserid = settings.botUserid;
 
+    schema = {
+        name: "telegram",
+        type: "platform",
+        timestamp: data.date,
+        isMentioned: checkIfMentioned(data.text, botUsername),
+        channel: {
+            name: "telegram",
+            server: {
+                id: data.chat.id || data.message.chat.id,
+                name: data.chat.username || data.message.chat.username,
+                type: data.chat.type || data.message.chat.type,
+            },
+            subChannel: {
+                id: data.chat.id,
+                name: data.chat.username,
+                type: data.chat.type
+            },
+        },
+        user: {
+            id: data.from.id,
+            name: data.from.username,
+            firstName: data.from.first_name,
+            lastName: data.from.last_name,
+            isBot: data.from.is_bot
+        },
+        message: {
+            id: data.message_id,
+            type: data.chat.type,
+            text: data.text,
+            timestamp: data.date
+        },
+        inlineQuery: {
+            id: data.inline_query_id
+        }
+    }
 
-    // console.log(data)
-
-    schema.name = "telegram";
-    schema.type = "platform";
-    schema.timestamp = data.date;
-    schema.isMentioned = checkIfMentioned(data.text, botUsername);
-
-    schema.channel.name = "telegram"
-    schema.server.id = data.chat.id;
-    schema.server.name = data.chat.username;
-    schema.server.type = data.chat.type;
-    
-    schema.subChannel.id = data.chat.id;
-    schema.subChannel.name = data.chat.username;
-    schema.subChannel.type = data.chat.type;
-
-    schema.user.id = data.from.id;
-    schema.user.name = data.from.username;
-    schema.user.firstName = data.from.first_name;
-    schema.user.lastName = data.from.last_name;
-    schema.user.isBot = data.from.is_bot;
-
-    schema.message.id = data.message_id;
-    schema.message.type = data.chat.type;
-    schema.message.text = data.text;
-    schema.message.timestamp = data.date;
+    if (data.inline_query_id) schema.message.isInlineQueryResponse = true
 
     return schema
 
