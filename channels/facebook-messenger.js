@@ -3,7 +3,7 @@ const path = require("path")
 const Logger = require("rf-logger")
 const logger = new Logger(path.parse(__filename).name)
 
-let {channelSchemaV2} = require("../schemas")
+let {ChannelSchemaV2} = require("../schemas")
 function FacebookMessengerContext(settings = {}) {
     
     if (!settings.data || settings.data == "") console.warn("WARNING no [data] provided");
@@ -14,7 +14,7 @@ function FacebookMessengerContext(settings = {}) {
     // logger.log(JSON.stringify(data, null, 2))
     // logger.log(data.messaging)
 
-    let schema = new channelSchema({
+    let schema = new ChannelSchemaV2({
         name: "facebookMessenger",
         channel: {},
         subChannel: {},
