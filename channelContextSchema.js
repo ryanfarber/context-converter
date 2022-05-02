@@ -2,22 +2,23 @@
 
 function channelContext() {
 
-	this.name = undefined;
-	this.type = undefined;
-	this.timestamp = undefined;
-	this.isMentioned = undefined;
+	this.name = undefined
+	this.type = undefined
+	this.timestamp = undefined
+	this.isMentioned = undefined
 	this.channel = {
 		name: undefined,
 		id: undefined,
-	};
+	}
+	this.inlineQuery = {
+		id: undefined
+	}
+
 	// i.e. discord server
 	this.server = {
 		name: undefined,
 		id: undefined,
 		type: undefined
-	};
-	this.inlineQuery = {
-		id: undefined
 	}
 
 	// i.e. discord channel/telegram chat
@@ -25,8 +26,9 @@ function channelContext() {
 		name: undefined,
 		id: undefined,
 		type: undefined
-	};
+	}
 
+	// user data
 	this.user = {
 		name: undefined,
 		id: undefined,
@@ -38,7 +40,7 @@ function channelContext() {
 		isAdmin: undefined,
 		isMod: undefined,
 		isBot: undefined
-	};
+	}
 
 	// actual message text
 	this.message = {
@@ -47,8 +49,16 @@ function channelContext() {
 		text: undefined,
 		attachments: undefined,
 		timestamp: undefined,
-		isInlineQueryResponse: undefined
-	};
-};
+		isInlineQueryResponse: undefined,
+		hasPhotos: undefined,
+		hasFiles: undefined,
+		hasMedia: undefined,
+		media: [],
+		photos: [],
+		files: [],
+	}
+
+}
 
 module.exports = channelContext
+

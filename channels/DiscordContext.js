@@ -1,7 +1,7 @@
 // DiscordContext.js
 
-let channelSchema = require("../channelContextSchema.js");
-let schema = new channelSchema();
+let channelSchema = require("../channelContextSchema.js")
+let schema = new channelSchema()
 
 function DiscordContext(settings = {}) {
     
@@ -12,10 +12,10 @@ function DiscordContext(settings = {}) {
     let data = settings.data || { channel: { type: undefined, guild: { name: undefined, id: undefined } }, author: { username: undefined } };
     let botUsername = settings.botUsername;
     let botUserid = settings.botUserid;
-
+    // console.log(data)
     schema.name = "discord";
     schema.type = "platform"
-    schema.timestamp = data.date;
+    schema.timestamp = data.createdTimestamp;
     schema.isMentioned = checkIfMentioned(data.content, botUserid);
 
     schema.channel.name = "discord"
@@ -45,9 +45,10 @@ function DiscordContext(settings = {}) {
 function checkIfMentioned(message, botUserid) {
     if (!botUserid) return undefined;
 
-    botUserid = `<@!${botUserid}>`;   // adds the tags that discord adds to user
+    botUserid1 = `<@!${botUserid}>`;   // adds the tags that discord adds to user
+    botUserid2 = `<@${botUserid}>`
     let messageArgs = message.split(" ");  // split message into arguments
-    if (messageArgs.includes(botUserid)) return true;
+    if (messageArgs.includes(botUserid1) || messageArgs.includes(botUserid2)) return true;
     else return false;
 };
 
