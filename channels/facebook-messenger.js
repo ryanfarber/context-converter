@@ -1,9 +1,9 @@
 // facebook messenger context
-const path = require("path");
-const Logger = require("rf-logger");
-const logger = new Logger(path.parse(__filename).name);
+const path = require("path")
+const Logger = require("rf-logger")
+const logger = new Logger(path.parse(__filename).name)
 
-let channelSchema = require("../channelContextSchema_V2.js");
+let {channelSchemaV2} = require("../schemas")
 function FacebookMessengerContext(settings = {}) {
     
     if (!settings.data || settings.data == "") console.warn("WARNING no [data] provided");

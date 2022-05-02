@@ -1,7 +1,7 @@
 // TelegramContet.js
 
-let channelSchema = require("../channelContextSchema.js");
-let schema = new channelSchema();
+let {channelSchemaV1} = require("../schemas")
+let schema = new channelSchemaV1()
 
 // function TelegramContext(data = { from: {}, chat: {}, text: undefined }, botUsername, debug) {
 function TelegramContext(settings = {}) {

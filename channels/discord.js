@@ -1,7 +1,7 @@
 // DiscordContext.js
 
-let channelSchema = require("../channelContextSchema.js")
-let schema = new channelSchema()
+let {channelSchemaV1} = require("../schemas")
+let schema = new channelSchemaV1()
 
 function DiscordContext(settings = {}) {
     
