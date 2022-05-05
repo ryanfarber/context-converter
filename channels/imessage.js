@@ -1,9 +1,8 @@
 // imessage.js
 
-
 let ContextSchema = require("../schemas").ChannelSchemaV4
 const Logger = require("@ryanforever/logger")
-const logger = new Logger(__filename, {debug: false})
+const logger = new Logger(__filename, {debug: true})
 
 
 
@@ -101,8 +100,6 @@ function ImessageContext(input = {}, config = {}) {
 
 	return schema
 }
-
-console.log(new ImessageContext(example))
 
 
 module.exports = ImessageContext
