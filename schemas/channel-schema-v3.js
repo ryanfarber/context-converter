@@ -8,7 +8,7 @@ function ChannelSchema(d = {}) {
 	let inlineQuery = d?.inlineQuery
 	let subChannel = d?.subChannel
 	let message = d?.message
-
+	this._v = "3.0.0"
 	this.name = d.name
 	this.type = d.type
 	this.timestamp = d.timestamp

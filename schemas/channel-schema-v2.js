@@ -1,4 +1,4 @@
-
+// channel-schema-v2
 
 function channelContext(data = {channel: {}, server: {}, subChannel: {}, user: {}, message: {}, inlineQuery: {}}) {
 	// data = {channel: {}, server: {}, subChannel: {}, user: {}, message: {}, inlineQuery: {}}

@@ -1,7 +1,7 @@
 // imessage.js
 
 
-let {ChannelSchemaV3} = require("../schemas")
+let ContextSchema = require("../schemas").ChannelSchemaV4
 const Logger = require("@ryanforever/logger")
 const logger = new Logger(__filename, {debug: false})
 
@@ -44,7 +44,7 @@ function ImessageContext(input = {}, config = {}) {
 	// let input
 
 	let timestamp = input.date_sent
-	let schema = new ChannelSchemaV3({
+	let schema = new ContextSchema({
 		name: "imessage",
 		type: "platform",
 		timestamp,
@@ -102,6 +102,7 @@ function ImessageContext(input = {}, config = {}) {
 	return schema
 }
 
+console.log(new ImessageContext(example))
 
 
 module.exports = ImessageContext

@@ -1,4 +1,4 @@
-
+// channel schema v1
 
 function channelContext() {
 
