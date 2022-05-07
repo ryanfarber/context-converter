@@ -1,7 +1,7 @@
 // facebook messenger context
 const path = require("path")
-const Logger = require("rf-logger")
-const logger = new Logger(path.parse(__filename).name)
+const Logger = require("@ryanforever/logger")
+const logger = new Logger(__filename, {debug: false})
 
 let {ChannelSchemaV2} = require("../schemas")
 function FacebookMessengerContext(settings = {}) {
