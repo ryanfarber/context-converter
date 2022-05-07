@@ -20,8 +20,6 @@ a tool for converting different channel contexts into a unified context
 const ContextConverter = require("@ryanforever/context-converter")
 
 const discord = new ContextConverter.DiscordContext()
-const twitch = new ContextConverter.TwitchContext()
-const twilio = new ContextConverter.TwilioContext()
 ```
 
 ## Example Usage
