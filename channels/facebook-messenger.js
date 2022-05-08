@@ -3,18 +3,18 @@ const path = require("path")
 const Logger = require("@ryanforever/logger")
 const logger = new Logger(__filename, {debug: false})
 
-let {ChannelSchemaV2} = require("../schemas")
-function FacebookMessengerContext(settings = {}) {
+let ChannelSchema = require("../schemas").ChannelSchemaV2
+
+
+function FacebookMessengerContext(data = {}, config = {}) {
     
-    if (!settings.data || settings.data == "") console.warn("WARNING no [data] provided");
-    if (!settings.botUsername) console.warn("WARNING no [botUsername] provided");
-    if (!settings.botUserid) console.warn("WARNING no [botUserid] provided");
+    if (!data)                  logger.warn(logs.MISSING_DATA)
+    if (!config.botUsername)    logger.warn(logs.MISSING_BOT_USERNAME)
+    if (!config.botUserid)      logger.warn(logs.MISSING_BOT_USERID)
 
-    let data = settings.data.entry[0]
-    // logger.log(JSON.stringify(data, null, 2))
-    // logger.log(data.messaging)
+    data = data?.entry[0]
 
-    let schema = new ChannelSchemaV2({
+    let schema = new ChannelSchema({
         name: "facebookMessenger",
         channel: {},
         subChannel: {},
@@ -24,27 +24,25 @@ function FacebookMessengerContext(settings = {}) {
         },
         message: {
             id: data.id,
-            type: settings?.data?.object || undefined,
+            type: config?.data?.object || undefined,
             text: data?.messaging[0]?.message?.text || undefined,
             timestamp: data?.messaging[0]?.timestamp || Date.now()
         }
     })
 
-    console.log(schema)
+    // CHECK IF MENTIONED //
+    function checkIfMentioned(message, botUserid) {
+        if (!botUserid) return undefined
+        // adds the tags that discord adds to user
+        botUserid = `<@!${botUserid}>`
+        // split message into arguments
+        let messageArgs = message.split(" ")
+        if (messageArgs.includes(botUserid)) return true
+        else return false
+    }
 
     return schema
-
-};
-
-// helpers
-function checkIfMentioned(message, botUserid) {
-    if (!botUserid) return undefined;
-
-    botUserid = `<@!${botUserid}>`;   // adds the tags that discord adds to user
-    let messageArgs = message.split(" ");  // split message into arguments
-    if (messageArgs.includes(botUserid)) return true;
-    else return false;
-};
+}
 
 
 module.exports = FacebookMessengerContext

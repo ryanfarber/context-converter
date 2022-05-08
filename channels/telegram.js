@@ -1,18 +1,21 @@
 // TelegramContet.js
 
-let {ChannelSchemaV1} = require("../schemas")
+const {ChannelSchemaV1} = require("../schemas")
 let schema = new ChannelSchemaV1()
+const Logger = require("@ryanforever/logger")
+const logger = new Logger(__filename, {debug: true})
+const logs = require("../logs.js")
 
 // function TelegramContext(data = { from: {}, chat: {}, text: undefined }, botUsername, debug) {
-function TelegramContext(settings = {}) {
+function TelegramContext(data = {}, config = {}) {
 
-    if (!settings.data || settings.data == "") console.warn("WARNING no [data] provided");
-    if (!settings.botUsername) console.warn("WARNING no [botUsername] provided");
-    if (!settings.botUserid) console.warn("WARNING no [botUserid] provided");
+    if (!config.data || config.data == "")  logger.warn(logs.MISSING_DATA)
+    if (!config.botUsername)                logger.warn(logs.MISSING_BOT_USERNAME)
+    if (!config.botUserid)                  logger.warn(logs.MISSING_BOT_USERID)
 
-    let data = settings.data || { from: {}, chat: {}, message: {chat:{}}, text: undefined };
-    let botUsername = settings.botUsername;
-    let botUserid = settings.botUserid;
+    // let data = config.data || { from: {}, chat: {}, message: {chat:{}}, text: undefined }
+    let botUsername = config.botUsername
+    let botUserid = config.botUserid
 
     // console.log(data)
     schema = {
@@ -64,8 +67,9 @@ function TelegramContext(settings = {}) {
 // helpers
 function checkIfMentioned(message, botUsername) {
     if (!botUsername || !message || message == "") return undefined
-    botUsername = `@${botUsername}`   // adds the tags in telegram format
-    let messageArgs = message.split(" ")  // split message into arguments
+    // adds the tags in telegram format
+    botUsername = `@${botUsername}`
+    let messageArgs = message.split(" ") 
     if (messageArgs.includes(botUsername)) return true
     else return false
 }

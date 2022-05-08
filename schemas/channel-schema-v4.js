@@ -11,7 +11,10 @@ function ContextSchema(d = {}) {
 	let inlineQuery = d?.inlineQuery
 	let subChannel = d?.subChannel
 	let message = d?.message
+
+	// SCHEMA VERSION
 	this._v = "4.0.0"
+
 	// CHANNEL //
 	this.channel = {
 		timestamp: d.timestamp,

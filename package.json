@@ -1,6 +1,6 @@
 {
   "name": "@ryanforever/context-converter",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "a tool for converting different channel contexts into a unified context",
   "keywords": [
     "discord",
